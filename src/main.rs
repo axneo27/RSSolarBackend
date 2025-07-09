@@ -19,6 +19,7 @@ async fn message_hey() -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    println!("asdfasdf");
     HttpServer::new(|| {
         App::new()
             .service(
@@ -37,4 +38,5 @@ async fn main() -> std::io::Result<()> {
     .bind(("127.0.0.1", 8080))?
     .run()
     .await
+
 }
